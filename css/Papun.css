@@ -1,0 +1,87 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing:
+	 border-box;
+}
+body {
+	background-image:url('https://unsplash.it/id/1001/1600/800');
+	
+}
+.menu-bar {
+	position: fixed;
+	top: 0;
+	left: -250px;
+	width: 250px;
+	height: 100%;
+	background-color: #213388;
+	transition: all .4s ease-in-out;
+}
+.menu-bar > h2 {
+	text-align: center;
+	color: #fff;
+	font-size: 29px;
+	padding: 20px;
+	background-color: #0B164A;
+}
+.menu-bar ul{
+	list-style: none;
+}
+.menu-bar ul li {
+	padding: 25px 0 25px 0;
+	transition: all .3s;
+	border-top: 1px solid #4D5680;
+	border-bottom: 1px solid #000;
+}
+.menu-bar ul a {
+	text-decoration: none;
+	color: #fff;
+	padding-left: 10px;
+	font-size: 18px;
+}
+.menu-bar ul i {
+	padding-right: 10px;
+}
+.menu-bar ul li:hover {
+	padding-left: 30px;
+}
+#check {
+	display: none;
+}
+label #btn, label #cancel {
+	position: absolute;
+	cursor: pointer;
+	background:#042331;
+	border-radius: 5px;
+}
+label #btn {
+	top: 40px;
+	left: 25px;
+	font-size: 35px;
+	color: white;
+	padding: 6px 12px;
+	transition: all .4s ease-in-out;
+}
+label #cancel {
+	z-index: 1111;
+	left: -195px;
+	top: 17px;
+	font-size: 30px;
+	color: #0A5275;
+	padding: 4px 9px;
+	transition: all .4s ease-in-out;
+}
+#check:checked ~ .menu-bar {
+	left: 0;
+	top: 0;
+}
+#check:checked ~ label #btn {
+	left: 250px;
+	opacity: 0;
+	pointer-events: none;
+}
+#check:checked ~ label #cancel {
+	left: 195px;
+}
+
+
